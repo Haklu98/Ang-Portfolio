@@ -1,0 +1,13 @@
+<h3>Työhistoria</h3>
+
+<!--Tehdään containeri taas tässäkin, jonne komponentti hakee sitten tiedot cv-data.ts tiedostosta.-->
+<div class="cv-container">
+  <div *ngFor="let Cv of cvs" class="cvwindow">
+    <h4 id="name">{{ Cv.name }}</h4>
+    <div class="cvinfo"> <app-cv-details *ngIf="Cv === selectedCv" [cv]="Cv"></app-cv-details></div>
+    <!--Tähän painike, jolla saadaan näytettyä tiedot juuri id:n perusteella.-->
+    <button class="buttonmore" [class.selected]="Cv === selectedCv" type="button"
+      (click)="toggleCvDetail(Cv)"><span>Lisätietoja</span></button>
+
+
+  </div>

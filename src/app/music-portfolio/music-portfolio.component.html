@@ -1,0 +1,59 @@
+<h3>Musiikkiprojektit</h3>
+<div class="filterdropdown">
+  <button id="filterButton" (click)="toggleFilters()">Suodatin</button>
+  <!--Tehdään filtterointi sivulle.-->
+  <div class="filters" *ngIf="showFilters" (mouseleave)="hideFilters()">
+    <div class="filterroles">
+      <p>Roolit</p>
+    </div>
+    <div class="roleinput"><label>
+        <input type="checkbox" [(ngModel)]="filters.Role1" /> Tuottaja
+        <input type="checkbox" [(ngModel)]="filters.Role2" /> Säveltäjä
+        <input type="checkbox" [(ngModel)]="filters.Role3" /> Miksaaja
+        <input type="checkbox" [(ngModel)]="filters.Role4" /> Sanoittaja
+        <input type="checkbox" [(ngModel)]="filters.Role5" /> Sovittaja
+      </label></div>
+    <div class="filterroles">
+      <p>Vuosi</p>
+    </div>
+    <div class="yearinput">
+      <input type="checkbox" [(ngModel)]="filters.Year1"> 2018
+      <input type="checkbox" [(ngModel)]="filters.Year2"> 2019
+      <input type="checkbox" [(ngModel)]="filters.Year3"> 2020
+      <input type="checkbox" [(ngModel)]="filters.Year4"> 2021
+      <input type="checkbox" [(ngModel)]="filters.Year5"> 2022
+      <input type="checkbox" [(ngModel)]="filters.Year6"> 2023
+      <input type="checkbox" [(ngModel)]="filters.Year7"> 2024
+    </div>
+  </div>
+</div>
+
+
+<!--Overlay containeri kuvaukselle.-->
+<div class="overlay-container">
+  <div class="projectdetail" *ngIf="selectedProject">
+    <h3>{{ selectedProject.name }}</h3>
+    <h4 id="year">{{ selectedProject.year }}</h4>
+    <app-mproject-detail id="projectdetail" [projects]="selectedProject"></app-mproject-detail>
+    <div class="buttoncontainer">
+      <button (click)="closeProjectDetail()" id="close">Sulje</button>
+      <a href="{{ selectedProject.url }}" target="_blank" id="link"><button id="spotifybutton"><img id="spotifypng"
+            src="assets/img/Spotify.png"></button></a>
+    </div>
+  </div>
+</div>
+<!--Tehdään flex containeri ja sille ngFor looppi jokaista projektitaulukkoa kohden.-->
+<div class=" flexcontainer">
+  <div *ngFor="let project of projects && filteredProjects " class="projectthumb">
+    <img id="image" src="{{ project.image }}">
+    <h4 id="name">{{ project.name }}</h4>
+    <div id="roles">Roolit: {{ project.roles.join(', ') }}</div>
+    <!--Tehdään painike, jolla saadaan projektin kuvaus esiin ja painamalla uudelleen nappia tai painamalla
+    toista nappia, kyseinen kuvaus sulkeutuu.-->
+    <button [class.selected]="project.id === selectedProject?.id" type="button" (click)="toggleProjectDetail(project)"
+      class="buttonmore">
+      <span>Näytä lisää</span></button>
+
+  </div>
+
+</div>

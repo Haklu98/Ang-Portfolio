@@ -1,0 +1,13 @@
+<h3>Koulutustaustani</h3>
+
+<div class="education-container">
+  <div *ngFor="let edu of educations" class="educationwindow">
+    <h4 id="name">{{ edu.sname }}</h4>
+    <h5>{{ edu.year }}</h5>
+    <div class="educationinfo">
+      <app-education-details *ngIf="edu === selectedEducation" [Education]="edu"></app-education-details>
+    </div>
+    <button class="educationbutton" [class.selected]="edu === selectedEducation" type="button"
+      (click)="toggleEducationDetails(edu)">Lisää</button>
+  </div>
+</div>

@@ -1,0 +1,47 @@
+h4,
+h5 {
+  color: white;
+  text-align: center;
+}
+
+.education-container {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  align-content: center;
+}
+
+.educationwindow {
+  position: relative;
+  justify-content: flex-end;
+  width: 50rem;
+  margin: 1rem auto;
+  justify-self: center;
+  background-color: rgba(66, 39, 92, 0.689);
+  border-radius: 0.3rem;
+}
+
+.educationbutton {
+  position: relative;
+  justify-content: flex-end;
+  text-align: center;
+  background-color: rgb(132, 59, 142);
+  border: none;
+  color: white;
+  padding: 0.5rem;
+  margin: 1rem;
+  align-self: flex-end;
+  border-radius: 0.2rem;
+  filter: drop-shadow(2px 2px 2px #222);
+}
+
+button:hover {
+  background-color: rgb(37, 9, 42);
+}
+
+.educationinfo {
+  color: white;
+  text-align: center;
+}

@@ -1,0 +1,12 @@
+<h3>IT-Projektit</h3>
+
+<div class="it-container">
+  <div *ngFor="let It of itprojs" class="itwindow">
+    <h4 id="name">{{ It.name }}</h4>
+    <div class="itinfo">
+      <app-it-details *ngIf="It === selectedItproject" [itprojects]="It"></app-it-details>
+    </div>
+    <button class="itbutton" [class.selected]="It === selectedItproject" type="button"
+      (click)="toggleItDetail(It)">Lisää</button>
+  </div>
+</div>

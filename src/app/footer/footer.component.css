@@ -1,0 +1,41 @@
+footer {
+  min-height: 2rem;
+  margin-top: auto;
+  color: white;
+  background-image: linear-gradient(
+    to right,
+    rgb(58, 0, 66),
+    rgb(37, 37, 37),
+    rgb(58, 0, 66)
+  );
+}
+
+.footer-line {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  padding: 0.5rem;
+}
+
+#footer-contact {
+  display: inline;
+  flex-grow: 0;
+}
+
+#footer-copyright {
+  flex-grow: 1;
+  align-self: center;
+  text-align: center;
+  display: inline;
+}
+
+#footer-logo {
+  flex-grow: 0;
+  display: inline;
+  width: 30vh;
+}
+
+#footer-img {
+  width: 5rem;
+  border-radius: 1rem;
+}

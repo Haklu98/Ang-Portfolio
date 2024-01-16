@@ -1,0 +1,54 @@
+.otsikko {
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 3rem;
+  padding: 1rem;
+  margin: 0;
+  width: 100vh;
+  filter: drop-shadow(2px 2px 2px #b6b6b6);
+  color: rgb(255, 255, 255);
+}
+p {
+  text-align: center;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+
+  align-items: center;
+  background-image: linear-gradient(to right, rgb(0, 0, 0), rgb(58, 0, 66));
+}
+
+footer {
+  margin-top: auto;
+}
+
+.sociallinks {
+  display: flex;
+  justify-content: center;
+  width: 100vh;
+  margin-left: 0rem;
+}
+
+.linkbutton {
+  border: none;
+  margin: 0.2rem;
+  background: none;
+  cursor: pointer;
+  transition: transform 0.5s;
+}
+
+.linkbutton:hover {
+  transform: scale(1.1);
+}
+
+.linkimg {
+  width: 3rem;
+  filter: drop-shadow(0px 0px 3px #b6b6b69c);
+}

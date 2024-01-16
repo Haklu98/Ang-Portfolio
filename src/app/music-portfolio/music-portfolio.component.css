@@ -1,0 +1,166 @@
+.flexcontainer {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.projectthumb {
+  display: flex-column;
+  align-items: center;
+  padding: 1rem;
+  width: 20rem;
+  height: flex;
+  background-color: rgba(72, 57, 75, 0.614);
+  border: 0.3rem solid #000000ad;
+
+  color: rgb(213, 213, 213);
+  border-radius: 0.4rem;
+  opacity: 90%;
+  transition: transform 0.4s;
+  background-size: cover;
+  scale: 0.8;
+}
+
+.projectthumb:hover {
+  transform: scale(1.05);
+  filter: drop-shadow(0px 0px 10px #8851ab6e);
+}
+
+.buttonmore {
+  background-color: rgb(132, 59, 142);
+  border: none;
+  color: white;
+  padding: 0.5rem;
+  border-radius: 0.2rem;
+  margin: 0.5rem;
+  filter: drop-shadow(2px 2px 2px #222);
+}
+
+.buttonmore:hover {
+  background-color: rgb(37, 9, 42);
+}
+
+.filterdropdown {
+  position: relative;
+  display: flexbox;
+}
+
+#filterButton {
+  margin-left: 2rem;
+  padding: 0.4rem;
+  cursor: pointer;
+  border: none;
+  background-color: rgb(98, 65, 129);
+  color: white;
+  border-radius: 0.2rem;
+}
+
+.filters {
+  position: absolute;
+  display: flex-column;
+  margin-left: 2rem;
+  padding: 0.3rem;
+  border: 1px solid #ccc;
+  border-radius: 0.2rem;
+  background-color: #75757592;
+  z-index: 4;
+  color: white;
+}
+
+.filterroles {
+  font-size: 1rem;
+}
+
+.roleinput {
+  margin-bottom: 0.2rem;
+}
+
+.overlay-container {
+  position: relative;
+  display: flexbox;
+}
+
+.projectdetail {
+  position: fixed;
+  display: flexbox;
+  padding: 4rem;
+  top: 50%;
+  left: 50%;
+  border: 1px solid #ccc;
+  color: white;
+  transform: translate(-50%, -50%);
+  background-color: #47184bc5;
+  z-index: 9999;
+  filter: drop-shadow(0px 0px 10px #222);
+  border-radius: 0.4rem;
+}
+
+#image {
+  display: flex;
+  width: 17rem;
+  height: 17rem;
+  justify-content: space-around;
+  filter: drop-shadow(0px 0px 10px #222);
+}
+
+#name {
+  font-size: 1.5rem;
+  display: flex;
+  padding: 0.5rem;
+}
+
+#year {
+  display: flex;
+  padding: 0.5rem;
+  text-align: center;
+  justify-content: center;
+}
+
+#type {
+  display: flex;
+  padding: 0.5rem;
+}
+
+#roles {
+  display: flex;
+  padding: 0.5rem;
+}
+
+#projectdetail {
+  text-align: center;
+}
+
+.buttoncontainer {
+  display: flex;
+  gap: 40rem;
+}
+
+#close {
+  background-color: rgb(132, 59, 142);
+  border: none;
+  color: white;
+  width: 4rem;
+  padding: 0.5rem;
+  margin-top: 1rem;
+  border-radius: 0.2rem;
+  filter: drop-shadow(2px 2px 2px #222);
+}
+
+#close:hover {
+  background-color: rgb(37, 9, 42);
+}
+
+#spotifypng {
+  width: 4rem;
+}
+
+#spotifybutton {
+  background: none;
+  border: none;
+  margin: 0;
+  transition: scale 0.4s;
+}
+
+#spotifybutton:hover {
+  scale: 1.2;
+}
